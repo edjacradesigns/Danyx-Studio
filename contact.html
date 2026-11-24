@@ -1,17 +1,93 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact | Danyx Studio, Maua</title><meta name="description" content="Contact Danyx Studio in Maua Town, Meru by phone, WhatsApp, email or the contact form.">
-<link rel="icon" href="images/logo.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,500&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/styles.css"></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | Danyx Studio, Maua</title>
+  <meta name="description" content="Contact Danyx Studio in Maua Town, Meru by phone, WhatsApp, email or the contact form.">
+  <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
 <body>
-<section class="hero small"><div class="bg-slider" aria-hidden="true"></div><div class="wrap"><h1>Contact Us</h1><p>Call, message or visit the studio in Maua.</p></div></section>
-<section><div class="wrap split"><div><h2>Let’s talk music</h2><div class="grid" style="grid-template-columns:1fr">
-<div class="card"><h3>Phone</h3><p><a href="tel:0740682321">0740682321</a></p></div>
-<div class="card"><h3>WhatsApp</h3><p><a href="https://wa.me/254740682321" target="_blank" rel="noopener">0740682321</a></p></div>
-<div class="card"><h3>Email</h3><p><a href="mailto:edjacradesigns@gmail.com">edjacradesigns@gmail.com</a></p></div>
-<div class="card"><h3>Location</h3><p>Maua Town, Meru County</p></div></div></div>
-<form class="f" action="https://formsubmit.co/edjacradesigns@gmail.com" method="POST"><input type="hidden" name="_subject" value="Danyx Studio: Contact message"><input type="hidden" name="_template" value="table"><input type="hidden" name="_captcha" value="false"><div class="two"><div><label for="name">Full name</label><input id="name" name="name" type="text" required></div><div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" required></div></div><div><label for="email">Email</label><input id="email" name="email" type="email" required></div><div><label for="subject">Subject</label><input id="subject" name="subject" type="text" required></div><div><label for="message">Your message</label><textarea id="message" name="message" required></textarea></div><button class="btn gold" type="submit">Send message</button><p class="note">Your message goes straight to Danyx Studio. We reply by phone, WhatsApp or email.</p></form></div></section>
-<section class="alt"><div class="wrap"><h2>Find us</h2><iframe class="video" title="Map of Maua Town, Meru County, Kenya" loading="lazy" src="https://www.google.com/maps?q=Maua%20Town%2C%20Meru%20County%2C%20Kenya&output=embed"></iframe></div></section>
-<script src="js/main.js"></script></body></html>
+  <section class="hero small">
+    <div class="bg-slider" aria-hidden="true"></div>
+    <div class="wrap">
+      <h1>Contact Us</h1>
+      <p>Call, message or visit the studio in Maua.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap split">
+      <div>
+        <h2>Let’s talk music</h2>
+        <div class="grid" style="grid-template-columns:1fr">
+          <div class="card"><h3>Phone</h3><p><a href="tel:0740682321">0740682321</a></p></div>
+          <div class="card"><h3>WhatsApp</h3><p><a href="https://wa.me/254740682321" target="_blank" rel="noopener">0740682321</a></p></div>
+          <div class="card"><h3>Email</h3><p><a href="mailto:edjacradesigns@gmail.com">edjacradesigns@gmail.com</a></p></div>
+          <div class="card"><h3>Location</h3><p>Maua Town, Meru County</p></div>
+        </div>
+      </div>
+
+      <form class="f" id="contact-form" action="https://formsubmit.co/edjacradesigns@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Danyx Studio: Contact message">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <div class="two">
+          <div><label for="name">Full name</label><input id="name" name="name" type="text" autocomplete="name" required></div>
+          <div><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel" required></div>
+        </div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" autocomplete="email" required></div>
+        <div><label for="subject">Subject</label><input id="subject" name="subject" type="text" required></div>
+        <div><label for="message">Your message</label><textarea id="message" name="message" required></textarea></div>
+        <button class="btn gold" type="submit">Send message</button>
+        <p id="contact-status" class="note" role="status" aria-live="polite"></p>
+        <p class="note">Your message goes straight to Danyx Studio. We reply by phone, WhatsApp or email.</p>
+      </form>
+    </div>
+  </section>
+
+  <section class="alt">
+    <div class="wrap">
+      <h2>Find us</h2>
+      <iframe class="video" title="Map of Maua Town, Meru County, Kenya" loading="lazy" src="https://www.google.com/maps?q=Maua%20Town%2C%20Meru%20County%2C%20Kenya&output=embed"></iframe>
+    </div>
+  </section>
+
+  <script>
+    (function () {
+      var form = document.getElementById('contact-form');
+      var status = document.getElementById('contact-status');
+      var submit = form.querySelector('[type="submit"]');
+
+      form.addEventListener('submit', async function (event) {
+        event.preventDefault();
+        submit.disabled = true;
+        status.textContent = 'Sending your message…';
+
+        try {
+          var response = await fetch('https://formsubmit.co/ajax/edjacradesigns@gmail.com', {
+            method: 'POST',
+            body: new FormData(form),
+            headers: { Accept: 'application/json' }
+          });
+          var result = await response.json();
+          if (!response.ok || String(result.success).toLowerCase() !== 'true') {
+            throw new Error(result.message || 'The message could not be sent.');
+          }
+          status.textContent = 'Thanks! Your message has been sent.';
+          form.reset();
+        } catch (error) {
+          status.textContent = (error && error.message ? error.message : 'There was a problem sending your message.') + ' Please try again or email edjacradesigns@gmail.com.';
+        } finally {
+          submit.disabled = false;
+        }
+      });
+    })();
+  </script>
+  <script src="js/main.js"></script>
+</body>
+</html>
